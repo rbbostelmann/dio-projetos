@@ -2,7 +2,7 @@ body {
     padding: 0;
     margin: 0;
     color: aliceblue;
-    font-family: Montserrat;
+    font-family: Montserrat, monospace, serif;
 }
 
 
@@ -197,4 +197,106 @@ a:hover {
 #toggle:checked~.menu-items {
     visibility: visible;
     opacity: 1;
+}
+
+
+/*Main: Cards*/
+
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem 0;
+}
+
+.card-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+}
+
+.card {
+    height: 300px;
+    width: 400px;
+    background-image: url("./Images/mountains.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(.5);
+    color: aliceblue;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.card-text {
+    width: 40%;
+    font-family: Montserrat;
+    letter-spacing: 1px;
+    color: lightslategrey;
+    text-align: justify;
+}
+
+.card-wrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card-wrapper::before {
+    content: "";
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    display: block;
+    border: 1px solid aliceblue;
+    opacity: 0;
+    transition: .3s;
+}
+
+.card-wrapper>h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 0;
+    transition: .3s;
+}
+
+.card-wrapper>p {
+    font-size: 0;
+    visibility: hidden;
+    opacity: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: .3s
+}
+
+.card:hover {
+    filter: unset;
+}
+
+.card:hover>.card-wrapper::before {
+    opacity: 1;
+    width: 350px;
+    height: 250px;
+}
+
+.card:hover>.card-wrapper>h2 {
+    transform: translateY(-75px);
+}
+
+.card:hover>.card-wrapper>p {
+    font-size: 14px;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(75px);
 }
