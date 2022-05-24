@@ -6,5 +6,5 @@
 
 - Toggle;
 - Animação
-- -
+- "+"
 - nth-child
