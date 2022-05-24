@@ -291,7 +291,7 @@ a:hover {
 }
 
 .card:hover>.card-wrapper>h2 {
-    transform: translateY(-75px);
+    transform: translateY(-77px);
 }
 
 .card:hover>.card-wrapper>p {
@@ -299,4 +299,49 @@ a:hover {
     opacity: 1;
     visibility: visible;
     transform: translateY(75px);
+}
+
+
+/*Footer*/
+
+.footer {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 207, 69);
+}
+
+
+/*Media query: Still a lot to be improved*/
+
+@media(max-width: 800px) {
+    .social {
+        display: flex;
+        flex-direction: column;
+    }
+    .container {
+        margin-top: 0;
+    }
+    .card.container {
+        flex-direction: column;
+    }
+    .container>.card-container:nth-child(1),
+    .container>.card-container:nth-child(3) {
+        flex-direction: column-reverse;
+    }
+    .card {
+        height: 250px;
+        width: 250px;
+    }
+    .card-text {
+        width: 90%;
+        margin-top: 2rem;
+        text-align: center;
+    }
+    .card:hover>.card-wrapper::before {
+        height: 190px;
+        width: 190px;
+    }
 }
