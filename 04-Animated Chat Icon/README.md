@@ -1,3 +1,0 @@
-# Animated Chat Icon
-
->
